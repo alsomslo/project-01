@@ -9,7 +9,7 @@ $(function () {
         onLeave: function (index, nextIndex, direction) {
             console.log(index, nextIndex, direction)
             $('h1 span').text(nextIndex)
-            $('.nav li').eq(nextIndex - 1).addClass('on')
+            $('nav li').eq(nextIndex - 1).addClass('on')
                 .siblings().removeClass('on')
             $('.section').eq(nextIndex - 1).addClass('on')
                 .siblings().removeClass('on');
@@ -18,7 +18,5 @@ $(function () {
     $('.main_full').fullpage(option);
 
     // $('.section').eq(0).addClass('on');
-
-    const num = [1, 2, 3];
 
 })
