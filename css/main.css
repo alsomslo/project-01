@@ -10,14 +10,21 @@ ul {
 
 .header {
     position: fixed;
-    top: 50px;
-    left: 50px;
+    top: 20px;
+    left: 20px;
     z-index: 999;
+
+
+}
+
+.header img {
+    width: 170px;
+    height: 70px;
 }
 
 nav {
     position: fixed;
-    top: 50%;
+    top: 25%;
     right: 50px;
     transform: translate(0, -50%);
     z-index: 999;
@@ -32,14 +39,14 @@ nav li a {
 }
 
 nav li a::after {
-    content: "";
+    content: "1";
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: 0;
-    width: 30px;
-    height: 1px;
-    background: #333333;
-    transition: 0.5s;
+    width: 15px;
+    height: 2px;
+    background: #333;
+    transition: 0.7s;
 }
 
 nav li.on a::after {
@@ -56,30 +63,19 @@ nav li.on a::after {
 .section figure {
     position: relative;
     width: 300px;
-    height: 300px;
-    margin: 0 auto 30px auto;
-    border-radius: 50%;
+    height: 200px;
+    margin: 0 auto 50px auto;
+    border-radius: 500%;
     overflow: hidden;
     border: 12px solid rgba(0, 0, 0, 0.1);
 
     transform: translate(0, 100px);
     opacity: 0;
 
-    transition: 0.5s 1s;
+    transition: 0.5s 0.5s;
 
 }
 
-.section figure::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    right: 62px;
-    width: 50px;
-    height: 20px;
-    background: gray;
-    border-radius: 20px 0;
-    transform: rotate(-25deg);
-}
 
 .section.on figure {
     border-radius: 10%;
@@ -117,4 +113,15 @@ nav li.on a::after {
     text-align: center;
     transform: translate(0, 0);
     opacity: 1;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 999;
+}
+
+.footer img {
+    width: 170px;
 }
